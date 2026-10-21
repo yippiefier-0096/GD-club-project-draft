@@ -16,3 +16,15 @@ MonoBehaviour:
   msg_content: []
   msg_speed: []
   item: {fileID: 0}
+  paths:
+  - {fileID: 11400000, guid: 95f1523969d8a4a11b66a2a1a646d220, type: 2}
+  - {fileID: 11400000, guid: d26773359d955445591e7f6770b4777b, type: 2}
+  - {fileID: 11400000, guid: 3a96bc4d5edb1451f9dc5ca708e7f79b, type: 2}
+  testkey: 255
+  criteria:
+  - check_type: Test
+    check_id: 12
+    index: 1
+  - check_type: Test
+    check_id: 255
+    index: 2

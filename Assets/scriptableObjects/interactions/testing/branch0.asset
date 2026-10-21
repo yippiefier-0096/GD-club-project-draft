@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: branch0
   m_EditorClassIdentifier: Assembly-CSharp::interactInstance
   msg_speaker: []
-  msg_content: []
+  msg_content:
+  - door locked
   msg_speed: []
   item: {fileID: 0}

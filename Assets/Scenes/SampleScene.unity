@@ -347,9 +347,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a9c666c20d9b45c8b0619c003fa9ea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  content:
-  - Line three...!!!
-  - Line four!!!
+  content: []
+  interact_index: 0
   trigger_event:
     m_PersistentCalls:
       m_Calls:
@@ -1035,8 +1034,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   content:
-  - Line one!!!
-  - Line two!!!!
+  - {fileID: 0}
+  interact_index: 0
   trigger_event:
     m_PersistentCalls:
       m_Calls:

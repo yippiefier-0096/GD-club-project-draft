@@ -18,6 +18,7 @@ public class playerController : MonoBehaviour
     public bool can_control=true;
     private List<Collider2D> collision_result=new List<Collider2D>();
     private Collider2D interact_target;
+    public inventoryItem item_held;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -49,7 +50,6 @@ public class playerController : MonoBehaviour
             else if (interact_target.GetComponent<interactObject>())
                 {
                     var _i=interact_target.GetComponent<interactObject>();
-                    _i.lock_target=this;
                     _i.trigger_event.Invoke();
                 }
                     

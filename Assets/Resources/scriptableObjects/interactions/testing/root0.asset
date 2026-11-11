@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a920ca18edb04e488191259ec754198, type: 3}
+  m_Name: root0
+  m_EditorClassIdentifier: Assembly-CSharp::interactInstancePath
+  msg_speaker: []
+  msg_content: []
+  msg_speed: []
+  lock_to_current: 0
+  item: {fileID: 0}
+  paths:
+  - {fileID: 11400000, guid: 95f1523969d8a4a11b66a2a1a646d220, type: 2}
+  - {fileID: 11400000, guid: d26773359d955445591e7f6770b4777b, type: 2}
+  testkey: 12
+  criteria:
+  - check_type: Test
+    check_id: 12
+    wanted: 0
+    index: 1

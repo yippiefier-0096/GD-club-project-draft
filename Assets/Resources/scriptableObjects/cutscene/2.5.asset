@@ -12,4 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f231d9233c7d04f499dcc4c54dfaff48, type: 3}
   m_Name: 2.5
   m_EditorClassIdentifier: Assembly-CSharp::cutsceneStepAnim
-  step_list: []
+  step_list:
+  - key: baller
+    value:
+    - speed: 12
+      displacement: {x: 3, y: 0}
+      parallel: 0
+    - speed: 12
+      displacement: {x: -3, y: 0}
+      parallel: 0
+    - speed: 12
+      displacement: {x: 3, y: 0}
+      parallel: 0
+    - speed: 12
+      displacement: {x: -3, y: 0}
+      parallel: 0

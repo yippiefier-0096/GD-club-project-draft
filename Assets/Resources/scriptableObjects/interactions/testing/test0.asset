@@ -15,6 +15,7 @@ MonoBehaviour:
   msg_speaker:
   - wooooo
   msg_content:
-  - hahahahah this is my first time sayign things
+  - Lets bogey
   msg_speed: []
+  lock_to_current: 0
   item: {fileID: 0}

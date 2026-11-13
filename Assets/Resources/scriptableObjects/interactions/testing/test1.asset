@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::interactInstance
   msg_speaker: []
   msg_content:
-  - This is test number two but
-  - This will only happen the first time you check this
+  - I strained my pipis
+  - from how hard I bogeyed
   msg_speed: []
+  lock_to_current: 0
   item: {fileID: 0}

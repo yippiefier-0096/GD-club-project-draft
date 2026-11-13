@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2064554846483153563}
   - component: {fileID: 5361970716060769377}
   - component: {fileID: 3150454992907949427}
+  - component: {fileID: 9209730985911099125}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -260,6 +261,21 @@ MonoBehaviour:
   player_body: {fileID: 2064554846483153563}
   notifier: {fileID: 3527995621589774796}
   notice_radius: {fileID: 5361970716060769377}
+  can_control: 1
+  item_held: {fileID: 0}
+--- !u!114 &9209730985911099125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3171237140035136428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5deb522513af4d5db196275adac7bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::animationTarget
+  name_ref: player
 --- !u!1 &7718289270687112010
 GameObject:
   m_ObjectHideFlags: 0

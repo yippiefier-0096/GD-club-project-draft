@@ -31,7 +31,7 @@ public class cutscenePlayer : MonoBehaviour
         playerController _target= gameManager.player_main.GetComponent<playerController>();
         _target.can_control=false;
         _target.player_body.linearVelocity=Vector2.zero;
-
+        
         foreach (cutsceneStep i in cutscene.cutscene_Array)
         {
             

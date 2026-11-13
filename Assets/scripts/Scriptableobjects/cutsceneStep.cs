@@ -5,6 +5,4 @@ using UnityEngine;
 public abstract class cutsceneStep : ScriptableObject
 {   
     public abstract IEnumerator step();
-    
-    
 }   

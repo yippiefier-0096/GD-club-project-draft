@@ -10,7 +10,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class gameManager : MonoBehaviour
-{
+{   
+    [SerializeField]
     static public GameObject player_main;
     [Serializable]
     public struct playerSave
@@ -91,5 +92,13 @@ public class gameManager : MonoBehaviour
         _c.GetComponent<cutscenePlayer>().cutscene=_ins;
         _c.GetComponent<cutscenePlayer>().StartCoroutine("Play_cutscene"); 
     }
-    
+    static public Dictionary<string,animationTarget> List_animatable()
+    {
+        Dictionary<string,animationTarget> output=new Dictionary<string, animationTarget>();
+        foreach (animationTarget i in FindObjectsByType<animationTarget>())
+        {
+            output.Add(i.name_ref,i);
+        }
+        return output;
+    }
 }

@@ -495,6 +495,7 @@ GameObject:
   - component: {fileID: 390440607}
   - component: {fileID: 390440606}
   - component: {fileID: 390440609}
+  - component: {fileID: 390440610}
   m_Layer: 0
   m_Name: Circle (2)
   m_TagString: interactable
@@ -635,6 +636,19 @@ MonoBehaviour:
       m_Calls: []
   lock_target: {fileID: 0}
   cutscene_slot: {fileID: 11400000, guid: f1dec290e92754bde909e2f507f01a56, type: 2}
+--- !u!114 &390440610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390440605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5deb522513af4d5db196275adac7bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::animationTarget
+  name_ref: ballin
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,7 +874,11 @@ MonoBehaviour:
         m_SelectedSource:
           rid: -2
         m_Provider2DCache:
-          rid: -2
+          rid: 7094902548429275205
+    - rid: 7094902548429275205
+      type: {class: 'Provider2DCache`1[[UnityEngine.Rendering.Universal.Light2DProvider, Unity.RenderPipelines.Universal.2D.Runtime]]', ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data:
+        m_Cache: []
 --- !u!4 &619394802
 Transform:
   m_ObjectHideFlags: 0
@@ -1110,24 +1128,12 @@ MonoBehaviour:
   content:
   - {fileID: 11400000, guid: fa1d83682f7bd41e69a8cd5902219058, type: 2}
   cur_content: {fileID: 0}
-  is_save: 0
+  is_save: 1
   interact_index: 0
   repeat_mode: 0
   trigger_event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1505524221}
-        m_TargetAssemblyTypeName: gameManager, Assembly-CSharp
-        m_MethodName: saveToFile
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   lock_target: {fileID: 0}
   cutscene_slot: {fileID: 0}
 --- !u!1 &1807907412

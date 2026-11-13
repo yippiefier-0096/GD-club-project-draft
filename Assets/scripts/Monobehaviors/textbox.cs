@@ -28,7 +28,7 @@ public class textbox : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Z))
         {
             if (next_line)
-            {
+            { 
                 line_index+=1;
                 
                 if (content.GetLength(0)<=line_index)

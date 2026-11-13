@@ -50,6 +50,7 @@ public class playerController : MonoBehaviour
             else if (interact_target.GetComponent<interactObject>())
                 {
                     var _i=interact_target.GetComponent<interactObject>();
+                    _i.Init_event();
                     _i.trigger_event.Invoke();
                 }
                     

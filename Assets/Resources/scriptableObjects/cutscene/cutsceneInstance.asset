@@ -13,15 +13,6 @@ MonoBehaviour:
   m_Name: cutsceneInstance
   m_EditorClassIdentifier: Assembly-CSharp::cutsceneInstance
   cutscene_Array:
-  - duration: 0
-    dialogue: {fileID: 11400000, guid: fa1d83682f7bd41e69a8cd5902219058, type: 2}
-    movement: []
-    parallel: 0
-  - duration: 2
-    dialogue: {fileID: 0}
-    movement: []
-    parallel: 0
-  - duration: 0
-    dialogue: {fileID: 11400000, guid: fa1d83682f7bd41e69a8cd5902219058, type: 2}
-    movement: []
-    parallel: 0
+  - {fileID: 11400000, guid: 3bb2ac974b54e4c6a964a6dde36d7f62, type: 2}
+  - {fileID: 11400000, guid: 4181c1f8f297c44369db0278f4c6b75f, type: 2}
+  - {fileID: 11400000, guid: 54abe980cf9f54afcb3a948329854d23, type: 2}

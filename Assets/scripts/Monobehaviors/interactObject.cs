@@ -31,8 +31,9 @@ public class interactObject : MonoBehaviour
        interact_index=0;
        Init_event();
     }
-    void Init_event()
+    public void Init_event()
     {
+        print("updated");
         trigger_event.RemoveAllListeners();
         if (content.GetLength(0)>0)
         {

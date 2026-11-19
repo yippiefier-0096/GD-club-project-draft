@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using UnityPipeline.Microsoft.CodeAnalysis.CSharp.Syntax;
 
@@ -58,9 +59,8 @@ public class playerController : MonoBehaviour
                 {
                     print("nothing interesting");
                 }
-            
-            
         }
+        
     }
     void FixedUpdate()
     {

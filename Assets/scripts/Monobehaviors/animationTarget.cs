@@ -20,15 +20,26 @@ public class animationTarget : MonoBehaviour
     public void SetDisplace(cutsceneStepAnim.animStep[] steps)
     {
         Vector3 _origin=transform.position;
-        Vector3 _target=Vector3.zero;
+        Vector3 _target;
         DOTween.defaultEaseType=Ease.Linear;
         DG.Tweening.Sequence seq = DOTween.Sequence();
         foreach (cutsceneStepAnim.animStep i in steps)
         {
-            
-            _target=_origin+new Vector3(i.displacement.x,i.displacement.y,0);
-            seq.Append(gameObject.transform.DOMove(_target,i.displacement.magnitude/i.speed));
-            _origin=_target;
+            if (i.wait_duration>0)
+            {
+                seq.Append(transform.DOMove(transform.position,i.wait_duration));
+            }
+            else if (i.direct_target)
+            {
+                _target=new Vector3(i.displacement.x,i.displacement.y,0);
+                seq.Append(gameObject.transform.DOMove(_target,i.displacement.magnitude/i.speed));
+            }
+            else 
+            {
+                _target=_origin+new Vector3(i.displacement.x,i.displacement.y,0);
+                seq.Append(gameObject.transform.DOMove(_target,i.displacement.magnitude/i.speed));
+                _origin=_target;
+            }
         }
     }
     public void SetTarget(cutsceneStepAnim.animStep[] steps)
@@ -41,4 +52,5 @@ public class animationTarget : MonoBehaviour
             seq.Append(gameObject.transform.DOMove(_target,i.displacement.magnitude/i.speed));
         }       
     }
+    
 }

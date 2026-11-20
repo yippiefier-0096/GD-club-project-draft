@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Mono.Cecil;
 using Unity.Mathematics;
 using Unity.VisualScripting;
@@ -92,12 +93,17 @@ public class gameManager : MonoBehaviour
         _c.GetComponent<cutscenePlayer>().cutscene=_ins;
         _c.GetComponent<cutscenePlayer>().StartCoroutine("Play_cutscene"); 
     }
-    static public Dictionary<string,animationTarget> List_animatable()
+    static public Dictionary<string,animationTarget[]>    List_animatable()
     {
-        Dictionary<string,animationTarget> output=new Dictionary<string, animationTarget>();
+        Dictionary<string,animationTarget[]> output=new Dictionary<string, animationTarget[]>();
         foreach (animationTarget i in FindObjectsByType<animationTarget>())
         {
-            output.Add(i.name_ref,i);
+            string _n=i.name_ref;
+            if (output.ContainsKey(_n))
+            {
+                output.GetValueOrDefault(_n).Append<animationTarget>(i);
+            }
+            output.Add(i.name_ref,new animationTarget[] {i});
         }
         return output;
     }

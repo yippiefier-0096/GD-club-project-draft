@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Mono.Cecil;
 using Unity.Mathematics;
+using Unity.Tutorials.Editor;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.EditorTools;
@@ -33,18 +34,21 @@ public class gameManager : MonoBehaviour
         [SerializeField]
         [Tooltip("Same as above, but for the state of objects around the map")]
         public Dictionary <int, int> objflag;
-    }
+    } 
 
     [SerializeField]
     public static playerSave loaded_file;
+
+    
     void Awake()
     {
+        if (FindAnyObjectByType<gameManager>())
+        
         DontDestroyOnLoad(gameObject);
     }
     void Start()
     {
-        player_main = Instantiate(Resources.Load<GameObject>("player"));
-        player_main.transform.position=new Vector2(0,0);
+
     }
     void Update()
     {
@@ -52,10 +56,21 @@ public class gameManager : MonoBehaviour
     }
     static void initializePlayer(playerSave Data)
     {
-        SceneManager.LoadSceneAsync(Data.current_map,LoadSceneMode.Single);
+        if (Data.play_time == 0)
+        {
+            Data.current_map="SampleScene";
+            Data.current_item=null;
+            Data.current_position=Vector2.zero;
+            
+        }
+        
+        SceneManager.LoadScene(Data.current_map,LoadSceneMode.Single);
         player_main = Instantiate(Resources.Load<GameObject>("player"));
         player_main.transform.position=Data.current_position;
-        player_main.GetComponent<playerController>().item_held=Data.current_item;    
+        print(Data.play_time);
+        player_main.GetComponent<playerController>().item_held=Data.current_item; 
+        DontDestroyOnLoad(player_main.gameObject);
+        print("hello?");  
     }
 
     static public void saveToFile()
@@ -68,7 +83,9 @@ public class gameManager : MonoBehaviour
     }
     static public void loadFromFile(int slotID)
     {
-        loaded_file=JsonUtility.FromJson<playerSave>(PlayerPrefs.GetString("Save"));
+        loaded_file=PlayerPrefs.GetString("Save").IsNotNullOrEmpty()? 
+        JsonUtility.FromJson<playerSave>(PlayerPrefs.GetString("Save")):
+        new playerSave();
         initializePlayer(loaded_file);
     }
 

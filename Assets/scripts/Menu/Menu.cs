@@ -6,13 +6,13 @@ public class Menu : MonoBehaviour
     private static int BackToWhere;
     public void GameStart()
     {
-        SceneManager.LoadScene(1);
+        gameManager.loadFromFile(0);
     }
 
     public void SettingMenu()
     {
         BackToWhere=0;
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 
     public void SoundMenu()
@@ -24,7 +24,10 @@ public class Menu : MonoBehaviour
     {   
         Application.Quit();
     }
-
+    public void DeleteSave()
+    {
+        PlayerPrefs.SetString("Save","");
+    }
     public void Back()
     {
         if (BackToWhere == 0)
@@ -41,7 +44,7 @@ public class Menu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))//press esc to setting
         {
             BackToWhere = 1;
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(1);
         }
     }
 }

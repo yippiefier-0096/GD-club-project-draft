@@ -25,11 +25,29 @@ public class interactObject : MonoBehaviour
     private GameObject text;
     public playerController lock_target;
     public cutsceneInstance cutscene_slot;
+    [Serializable]
+    public struct StateResource
+    {
+        public Vector2 state_pos;
+        
+    }
+    public int state_entry;
+    public StateResource[] state_reference;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
        interact_index=0;
        Init_event();
+       
+    }
+    void Retrieve_state()
+    {
+        int _e=gameManager.loaded_file.objflag[state_entry];
+        if ( _e != 0)
+        {
+            Vector2 _pos= state_reference[_e].state_pos;
+            transform.SetPositionAndRotation(transform.position+new Vector3(_pos.x,_pos.y,0),quaternion.identity);
+        }
     }
     public void Init_event()
     {

@@ -5,6 +5,7 @@ using DG.Tweening.Core;
 public class animationTarget : MonoBehaviour
 {
     public string name_ref;
+    public int save_flag_id_pos;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

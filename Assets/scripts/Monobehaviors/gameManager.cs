@@ -60,10 +60,8 @@ public class gameManager : MonoBehaviour
         {
             Data.current_map="SampleScene";
             Data.current_item=null;
-            Data.current_position=Vector2.zero;
-            
+            Data.current_position=Vector2.zero;   
         }
-        
         SceneManager.LoadScene(Data.current_map,LoadSceneMode.Single);
         player_main = Instantiate(Resources.Load<GameObject>("player"));
         player_main.transform.position=Data.current_position;
@@ -81,7 +79,7 @@ public class gameManager : MonoBehaviour
         PlayerPrefs.SetString("Save",JsonUtility.ToJson(loaded_file));
         print(PlayerPrefs.GetString("Save"));   
     }
-    static public void loadFromFile(int slotID)
+    static public void loadFromFile()
     {
         loaded_file=PlayerPrefs.GetString("Save").IsNotNullOrEmpty()? 
         JsonUtility.FromJson<playerSave>(PlayerPrefs.GetString("Save")):

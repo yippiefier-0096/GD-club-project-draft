@@ -8,13 +8,13 @@ public class Menu : MonoBehaviour
     public void GameStart()
     {
         GetWhere();
-        SceneManager.LoadScene(1);
+        gameManager.loadFromFile();
     }
 
     public void SettingMenu()
     {
         GetWhere();
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 
     public void ExitGame()

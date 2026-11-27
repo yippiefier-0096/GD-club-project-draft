@@ -17,8 +17,9 @@ public class cutsceneStepAnim : cutsceneStep
         public UnityEngine.Vector2 displacement;
         public bool direct_target;
         public float wait_duration;
+        public string animation_called;
     }
-
+    
     [SerializeField]
     public Dictionary<string, animStep[]> step_list;
 

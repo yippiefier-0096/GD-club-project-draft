@@ -6,12 +6,12 @@ public class animationTarget : MonoBehaviour
 {
     public string name_ref;
     public int save_flag_id_pos;
+    Vector3 displacement_to_save=Vector3.zero;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -20,6 +20,7 @@ public class animationTarget : MonoBehaviour
 
     public void SetDisplace(cutsceneStepAnim.animStep[] steps)
     {
+
         Vector3 _origin=transform.position;
         Vector3 _target;
         DOTween.defaultEaseType=Ease.Linear;
@@ -51,7 +52,7 @@ public class animationTarget : MonoBehaviour
         {
             var _target=new Vector3(i.displacement.x,i.displacement.y,0);
             seq.Append(gameObject.transform.DOMove(_target,i.displacement.magnitude/i.speed));
-        }       
+        }
     }
     
 }

@@ -12,10 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b194070f083304f0693788eaa5066e2e, type: 3}
   m_Name: test0
   m_EditorClassIdentifier: Assembly-CSharp::interactInstance
-  msg_speaker:
-  - wooooo
-  msg_content:
-  - Lets bogey
-  msg_speed: []
+  msg:
+  - content: let me cook
+    speaker: 
+    c_step: {fileID: 0}
+    arguments:
+      speed: 0
+  - content: ...well I'll cook the next time you see me
+    speaker: 
+    c_step: {fileID: 0}
+    arguments:
+      speed: 0
   lock_to_current: 0
   item: {fileID: 0}

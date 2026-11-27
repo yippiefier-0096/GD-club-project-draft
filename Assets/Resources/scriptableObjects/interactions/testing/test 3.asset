@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b194070f083304f0693788eaa5066e2e, type: 3}
   m_Name: test 3
   m_EditorClassIdentifier: Assembly-CSharp::interactInstance
-  msg_speaker: []
-  msg_content:
-  - already open
-  msg_speed: []
+  msg:
+  - content: 
+    speaker: 
+    c_step: {fileID: 0}
+    arguments:
+      speed: 0
+  lock_to_current: 0
   item: {fileID: 0}

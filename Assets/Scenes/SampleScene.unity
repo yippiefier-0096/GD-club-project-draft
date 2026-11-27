@@ -372,6 +372,8 @@ MonoBehaviour:
         m_CallState: 2
   lock_target: {fileID: 0}
   cutscene_slot: {fileID: 0}
+  state_entry: 0
+  state_reference: []
 --- !u!58 &231341613
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -626,7 +628,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a9c666c20d9b45c8b0619c003fa9ea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::interactObject
-  content: []
+  content:
+  - {fileID: 11400000, guid: fa1d83682f7bd41e69a8cd5902219058, type: 2}
+  - {fileID: 11400000, guid: 3799feb9947284dda9872a9988fd2ff0, type: 2}
+  - {fileID: 11400000, guid: db0ee2cc97b8b41718abc66ad1b58f7e, type: 2}
   cur_content: {fileID: 0}
   is_save: 0
   interact_index: 0
@@ -636,6 +641,8 @@ MonoBehaviour:
       m_Calls: []
   lock_target: {fileID: 0}
   cutscene_slot: {fileID: 11400000, guid: f1dec290e92754bde909e2f507f01a56, type: 2}
+  state_entry: 0
+  state_reference: []
 --- !u!114 &390440610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -649,6 +656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::animationTarget
   name_ref: ballin
+  save_flag_id_pos: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,6 +902,83 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &921494640 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3171237140035136428, guid: aadf48cacba9b4bd0b8c0e933dd4e75c, type: 3}
+  m_PrefabInstance: {fileID: 1448970361}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &921494651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921494640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c50a0706e482465eb5fbfd43fc1a0bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+--- !u!1001 &1448970361
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3171237140035136428, guid: aadf48cacba9b4bd0b8c0e933dd4e75c, type: 3}
+      propertyPath: m_Name
+      value: player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867666157964192834, guid: aadf48cacba9b4bd0b8c0e933dd4e75c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867666157964192834, guid: aadf48cacba9b4bd0b8c0e933dd4e75c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867666157964192834, guid: aadf48cacba9b4bd0b8c0e933dd4e75c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867666157964192834, guid: aadf48cacba9b4bd0b8c0e933dd4e75c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867666157964192834, guid: aadf48cacba9b4bd0b8c0e933dd4e75c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867666157964192834, guid: aadf48cacba9b4bd0b8c0e933dd4e75c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867666157964192834, guid: aadf48cacba9b4bd0b8c0e933dd4e75c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867666157964192834, guid: aadf48cacba9b4bd0b8c0e933dd4e75c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867666157964192834, guid: aadf48cacba9b4bd0b8c0e933dd4e75c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867666157964192834, guid: aadf48cacba9b4bd0b8c0e933dd4e75c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3171237140035136428, guid: aadf48cacba9b4bd0b8c0e933dd4e75c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 921494651}
+  m_SourcePrefab: {fileID: 100100000, guid: aadf48cacba9b4bd0b8c0e933dd4e75c, type: 3}
 --- !u!1 &1524489470
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,7 +1168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   content:
-  - {fileID: 11400000, guid: fa1d83682f7bd41e69a8cd5902219058, type: 2}
+  - {fileID: 11400000, guid: 3a96bc4d5edb1451f9dc5ca708e7f79b, type: 2}
   cur_content: {fileID: 0}
   is_save: 1
   interact_index: 0
@@ -1093,6 +1178,8 @@ MonoBehaviour:
       m_Calls: []
   lock_target: {fileID: 0}
   cutscene_slot: {fileID: 0}
+  state_entry: 0
+  state_reference: []
 --- !u!114 &1764818020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1106,6 +1193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::animationTarget
   name_ref: baller
+  save_flag_id_pos: 0
 --- !u!1 &1807907412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1245,3 +1333,4 @@ SceneRoots:
   - {fileID: 1764818018}
   - {fileID: 231341615}
   - {fileID: 390440608}
+  - {fileID: 1448970361}

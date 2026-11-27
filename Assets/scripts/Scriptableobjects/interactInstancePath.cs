@@ -10,12 +10,20 @@ using UnityEngine.SocialPlatforms;
 public class interactInstancePath : interactInstance
 {
     public interactInstance[] paths;
+    public enum check_type_enum
+    {
+        TEST,
+        ITEM,
+        QUEST,
+        SIDE,
+        OBJ
+    }
     public int testkey;
     [Serializable]
     public struct pathcheck
     {
         [Tooltip("The type of flag being checked")]
-        public string check_type;
+        public check_type_enum check_type;
         [Tooltip("Which item of the selected type to check (e.g. story flag #92)")]
         public int check_id;
         [Tooltip("What the value of the checked item should be")]
@@ -32,10 +40,10 @@ public class interactInstancePath : interactInstance
         {
             switch (i.check_type)
             {
-                case "Item":
+                case check_type_enum.ITEM:
                       
                     break;
-                case "Test":
+                case check_type_enum.TEST:
                     if (i.check_id == testkey)
                     {
                         answer=paths[i.index];

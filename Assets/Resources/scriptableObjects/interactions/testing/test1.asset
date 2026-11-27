@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b194070f083304f0693788eaa5066e2e, type: 3}
   m_Name: test1
   m_EditorClassIdentifier: Assembly-CSharp::interactInstance
-  msg_speaker: []
-  msg_content:
-  - I strained my pipis
-  - from how hard I bogeyed
-  msg_speed: []
+  msg:
+  - content: check this out
+    speaker: 
+    c_step: {fileID: 11400000, guid: 4181c1f8f297c44369db0278f4c6b75f, type: 2}
+    arguments:
+      speed: 0
   lock_to_current: 0
   item: {fileID: 0}

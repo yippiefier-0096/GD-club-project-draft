@@ -9,6 +9,7 @@ using UnityEditor;
 using UnityEditor.EditorTools;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 public class gameManager : MonoBehaviour
@@ -87,18 +88,19 @@ public class gameManager : MonoBehaviour
         initializePlayer(loaded_file);
     }
 
-    static public void Push_text(interactInstance _ins)
+    static public GameObject Push_text(interactInstance _ins)
     {
         playerController _target= player_main.GetComponent<playerController>();
         _target.can_control=false;
         _target.player_body.linearVelocity=Vector2.zero;
         var text=Resources.Load<GameObject>("prefabs/dialogue");
         GameObject _t=Instantiate(text,Vector3.zero,quaternion.identity);
-        _t.GetComponentInChildren<textbox>().content=_ins.msg_content;
+        _t.GetComponentInChildren<textbox>().content=_ins.msg;
         _t.GetComponent<Canvas>().renderMode=RenderMode.ScreenSpaceOverlay;
         _t.transform.SetParent(_target.transform);
+        return _t;
     }
-    static public void Push_cutscene(cutsceneInstance _ins)
+    static public GameObject Push_cutscene(cutsceneStep _ins)
     {
         playerController _target= player_main.GetComponent<playerController>();
         _target.can_control=false;
@@ -107,6 +109,7 @@ public class gameManager : MonoBehaviour
         _c.AddComponent<cutscenePlayer>();
         _c.GetComponent<cutscenePlayer>().cutscene=_ins;
         _c.GetComponent<cutscenePlayer>().StartCoroutine("Play_cutscene"); 
+        return _c;
     }
     static public Dictionary<string,animationTarget[]>    List_animatable()
     {

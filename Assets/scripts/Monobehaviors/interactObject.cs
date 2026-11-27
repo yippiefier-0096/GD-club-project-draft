@@ -59,7 +59,7 @@ public class interactObject : MonoBehaviour
                 cur_content=_c.Check_path();
             else
                 cur_content=content[interact_index];
-            if (cur_content.msg_content is not null)
+            if (cur_content.msg.GetLength(0) !=0)
                 trigger_event.AddListener(Push_text);
             
             if (cur_content.item is not null)
@@ -68,8 +68,6 @@ public class interactObject : MonoBehaviour
             if (!cur_content.lock_to_current)
                 trigger_event.AddListener(Iterate);
         }
-        if (cutscene_slot)
-            trigger_event.AddListener(Push_cutscene);
         if (is_save)
             trigger_event.AddListener(gameManager.saveToFile);  
     }
@@ -95,10 +93,7 @@ public class interactObject : MonoBehaviour
     {   
         gameManager.Push_text(cur_content);
     }
-    public void Push_cutscene()
-    {   
-        gameManager.Push_cutscene(cutscene_slot);
-    }
+
     public void Give_item()
     {
         print("item");

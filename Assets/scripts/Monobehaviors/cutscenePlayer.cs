@@ -12,7 +12,7 @@ using UnityEngine.UIElements;
 public class cutscenePlayer : MonoBehaviour
 {   
 
-    public cutsceneInstance cutscene;
+    public cutsceneStep cutscene;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,12 +32,7 @@ public class cutscenePlayer : MonoBehaviour
         _target.can_control=false;
         _target.player_body.linearVelocity=Vector2.zero;
         
-        foreach (cutsceneStep i in cutscene.cutscene_Array)
-        {
-            
-            yield return i.step();
-        }
-        _target.can_control=true;
+        yield return cutscene.step();
         Destroy(gameObject);
     }
     // public IEnumerator C_step(cutsceneStep cur)
